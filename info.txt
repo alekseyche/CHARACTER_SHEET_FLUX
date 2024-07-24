@@ -1,0 +1,17 @@
+# 激活你的环境 (如果你还没激活)
+
+conda create -n musubi_env python=3.10 -y
+
+# 2. 激活新环境
+conda activate musubi_env
+
+# 安装 PyTorch 及其核心依赖，使用 CUDA 12.1 源
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+python
+>>> import torch
+>>> print("PyTorch 版本:", torch.__version__)
+>>> print("CUDA 是否可用:", torch.cuda.is_available())
+>>> if torch.cuda.is_available():
+...     print("PyTorch 检测到的 CUDA 版本:", torch.version.cuda)
+...
