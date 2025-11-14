@@ -25,3 +25,7 @@ git rm --cached ComfyUI/core.23303 ComfyUI/core.24153
 
 # 2. 确认所有配置（包括 LFS 跟踪的 .gitattributes 和 .gitignore）都已暂存
 git add .
+
+
+
+sh /workspace/git-push.sh
